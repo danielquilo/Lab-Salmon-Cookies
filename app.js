@@ -184,6 +184,88 @@ function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
+
+const liverpool = {
+  locationName: "Liverpool",
+  minCustPerHour: 23,
+  maxCustPerHour: 65,
+  avgCookiesPerSale: 6.3,
+  customersEachHour: [],
+  cookiesEachHour: [],
+  totalDailyCookies: 0,
+  calcCustomersEachHour: function () {
+    for (let i = 0; i < hours.length; i++) {
+      this.customersEachHour.push(random(this.minCustPerHour, this.maxCustPerHour));
+    }
+  },
+calcCookiesEachHour: function () {
+  for (let i = 0; i < hours.length; i++) {
+    const oneHour = Math.ceil(this.customersEachHour[i] * this.avgCookiesPerSale);
+    this.cookiesEachHour.push(oneHour);
+    this.totalDailyCookies += oneHour;
+  }
+},
+render() {
+  this.calcCustomersEachHour();
+  this.calcCookiesEachHour();
+  const unorderedList = document.getElementById("Liverpool");
+  for (let i = 0; i < hours.length; i++) {
+    const listItem = document.createElement("li");
+    listItem.textContent = hours[i] + ": " + this.cookiesEachHour[i] + " cookies";
+    unorderedList.appendChild(listItem);
+}
+}
+}
+
+Liverpool.render();
+function radom(min,max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+
+
+const manchester = {
+  locationName: "Manchester",
+  minCustPerHour: 23,
+  maxCustPerHour: 65,
+  avgCookiesPerSale: 6.3,
+  customersEachHour: [],
+  cookiesEachHour: [],
+  totalDailyCookies: 0,
+  
+  calcCookiesEachHour: function () {
+    for (let i = 0; i < hourss.length; i ++) {
+      this.customersEachHour.push(radom(this.minCustPerHour, this.maxCustPerHour));
+    }
+  },
+  calcCookiesEachHour: function () {
+    for (let i = 0; i < hours.length; i++) {
+      const oneHour = Math.ceil(this.customersEachHour[i] * this.avgCookiesPerSale);
+      this.cookiesEachHour.push(oneHour);
+      this.totalDailyCookies += oneHour;
+    }
+  },
+  render() {
+    this.calcCustomersEachHour();
+    this.calcCookiesEachHour();
+    const unorderedList = document.getElementById("Manchester");
+    for (let i = 0; i < hours.length; i++) {
+      const listItem = document.createElement("li");
+      listItem.textContent = hours[i] + ": " + this.cookiesEachHour[i] + " cookies";
+      unorderedList.appendChild(listItem);
+  }
+  }
+  }
+  
+  Manchester.render();
+  function radom(min,max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+
+
 // const allShops = [seattle, tokyo, dubai, paris, lima];
 
 // function renderAllShops() {

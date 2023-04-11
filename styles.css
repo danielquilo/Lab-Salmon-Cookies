@@ -88,9 +88,13 @@ Layout
 
 header {
   padding: 2rem 0;
+  background-image: linear-gradient(to left, salmon, white);
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 .header-container {
+  background-color: salmon;
   display: flex;
   justify-content: space-between;
 }
@@ -104,6 +108,8 @@ nav ul li {
 }
 
 .footer-container {
+  font-weight: bold;
+  background-image:linear-gradient(to left,white, salmon,white);
   padding: 2rem 0;
 }
 

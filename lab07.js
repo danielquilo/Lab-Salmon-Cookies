@@ -52,8 +52,10 @@ let tokyo = new CookieStand("Tokyo", 3, 24, 1.2);
 let dubai = new CookieStand("Dubai", 11, 38, 3.7);
 let paris = new CookieStand("Paris", 20, 38, 2.3);
 let lima = new CookieStand("Lima", 2, 16, 4.6);
+let liverpool = new CookieStand("Liverpool", 4, 15, 3.5);
+let manchester = new CookieStand("Manchester", 10, 18, 4.5);
 
-state.allCookieStands.push(seattle, tokyo, dubai, paris, lima);
+state.allCookieStands.push(seattle, tokyo, dubai, paris, lima, liverpool, manchester);
 
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
