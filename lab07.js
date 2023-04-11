@@ -108,3 +108,28 @@ function renderTable() {
 }
 
 renderTable();
+
+
+const cookieForm = document.getElementById("cookie-form");
+
+cookieForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = event.target.name.value;
+  const minCust = event.target.minCust.value;
+  const maxCust = event.target.maxCust.value;
+  const average = event.target.average.value;
+
+  const newStore = new CookieStand(name, minCust, maxCust, average);
+
+  // clear the total row
+  totalTR.innerHTML = "";
+  newStore.render();
+  // rerender the total row
+  renderTotals();
+  // reset input values
+  document.getElementById("name").value = "";
+  document.getElementById("min-cust").value = "";
+  document.getElementById("max-cust").value = "";
+  document.getElementById("average").value = "";
+});
