@@ -1,3 +1,45 @@
+html,body {
+height: 100%;
+background: #eceff1;
+transition: 0.3s;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.bi {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.bi-moon {
+  display: nome;
+}
+
+header {
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+  background-color: #eceff1;
+  box-shadow: 0.5px 0.5px 10px 0.5px #000 ;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+/* Dark Theme */
+.dark,
+.dark header {
+  background-color: #263238;
+  color: #fff;
+}
+
+
+
 html {
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
@@ -22,10 +64,6 @@ html {
   box-sizing: border-box;
 }
 
-.dark#body {
-color: #fff;
-background-color: black;
-}
 
 body {
   min-width: 320px;
@@ -114,8 +152,9 @@ nav ul li {
 
 .footer-container {
   font-weight: bold;
-  background-image:linear-gradient(to left,white, salmon,white);
+  background-image:linear-gradient(to bottom,white, salmon,white);
   padding: 2rem 0;
+  text-align: center;
 }
 
 table {
