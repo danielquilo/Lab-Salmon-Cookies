@@ -22,6 +22,11 @@ html {
   box-sizing: border-box;
 }
 
+.dark#body {
+color: #fff;
+background-color: black;
+}
+
 body {
   min-width: 320px;
   font-size: 1rem;
